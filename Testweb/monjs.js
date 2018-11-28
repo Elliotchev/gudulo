@@ -7,11 +7,11 @@ animate();
 function init() {
 
     camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, 0.01, 10 );
-    camera.position.z = 1;
+    camera.position.z = 3;
 
     scene = new THREE.Scene();
 
-    geometry = new THREE.BoxGeometry( 0.2, 0.2, 0.2 );
+    geometry = new THREE.BoxGeometry( 0.2, 0.5, 0.8 );
     material = new THREE.MeshNormalMaterial();
 
     mesh = new THREE.Mesh( geometry, material );
@@ -27,8 +27,8 @@ function animate() {
 
     requestAnimationFrame( animate );
 
-    mesh.rotation.x += 0.01;
-    mesh.rotation.y += 0.02;
+    mesh.rotation.x += 0.001;
+    mesh.rotation.y += 0.001;
 
     renderer.render( scene, camera );
 
